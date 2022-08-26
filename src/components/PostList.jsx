@@ -1,7 +1,9 @@
-import React from "react";
 import PostItem from "./PostItem";
 
 const PostList = ({ posts, title, remove }) => {
+  if (!posts.length) {
+    return <h1 className="postHeader">Посты не найдены</h1>;
+  }
   return (
     <div>
       <h1 className="postHeader">{title}</h1>
